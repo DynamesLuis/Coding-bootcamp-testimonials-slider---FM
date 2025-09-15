@@ -41,6 +41,7 @@ article .texts {
     background-repeat: no-repeat;
     background-position: top;
     background-size: 22%;
+    animation: showSlow 1.5s; 
 }
 
 article .name {
@@ -65,10 +66,21 @@ article .image {
     position: relative;
 }
 
-article .image img {
+article .image > img {
     box-shadow: 0px 44px 60px -22px rgba(0, 0, 0, 0.32);
     -webkit-box-shadow: 0px 44px 60px -22px rgba(0, 0, 0, 0.32);
     -moz-box-shadow: 0px 44px 60px -22px rgba(0, 0, 0, 0.32);
+    animation: showSlow 1s; 
+}
+
+@keyframes showSlow { 
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .action_btn {
@@ -110,6 +122,6 @@ article .image img {
     border-radius: 10px;
 }
 
-.hidden {
+article.hidden {
     display: none;
 }
